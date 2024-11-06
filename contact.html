@@ -1,35 +1,180 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Macaliag's Portfolio Website</title>
 
-    <link rel="icon" type="images/x-icon" href="logo.png">
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="logo.png" />
 
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
 
-    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css" />
-    <script type="text/javascript"src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
+  <!-- Boxicons CSS -->
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
 
-    
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
 
-<header class="text-center">
+  <!-- Navigation Bar -->
+  <header class="sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand">⸸⛧STARBOY⛧⸸</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="feature.html">Features</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
 
-        <nav class="navbar navbar-expand-lg navbar-dark">
-            <ul class="navbar-nav">
-                <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="feature.html">Features</a></li>
-          <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
-<section class="contact" id="contact">
+  <style>
+    /* General container settings */
+.container {
+    width: 80%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Contact section with gradient background and shadow */
+.contact {
+    background-image: url(background1.jpg) no-repeat center center/cover;
+    color: #fff;
+    padding: 30px 0;
+    border-radius: 10px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* Heading styling */
+h1 {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+
+/* Form styling */
+form {
+    background: url(background1.jpg) no-repeat center center/cover;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(8px);
+}
+
+/* Form group settings */
+.form-group {
+    margin-bottom: 2px;
+}
+
+/* Label styling */
+label {
+    font-size: 1.2rem;
+    color: #d4d4d4;
+    margin-bottom: 8px;
+    display: block;
+    font-weight: 500;
+}
+
+/* Form input and textarea styling */
+.form-control {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.1rem;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+/* Focus effect for inputs */
+.form-control:focus {
+    border-color: red;
+    outline: none;
+    box-shadow: 0 0 8px red;
+}
+
+/* Placeholder styling */
+.form-control::placeholder {
+    color: #bbb;
+}
+
+/* Button styling */
+.btn {
+    background: rgb(0, 0, 0);
+    color: white;
+    box-shadow: 0 0 4px red;
+    padding: 14px 30px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    text-align: center;
+    width: 100%;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+}
+
+.btn:active {
+    transform: translateY(1px);
+}
+
+/* Responsive design for mobile and tablet */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    .contact {
+        padding: 40px 0;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+}
+
+/* Smooth transition for form and button elements */
+.form-group,
+h1,
+.btn {
+    animation: fadeInUp 0.8s ease-out;
+}
+  </style>
+
+  <section class="contact" id="contact">
     <div class="container">
         <h1>Contact Us</h1>
         <form id="contact-form">

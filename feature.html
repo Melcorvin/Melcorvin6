@@ -1,112 +1,246 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Macaliag's Portfolio Website</title>
 
-    <!-- Favicon -->
-    <link rel="icon" type="images/x-icon" href="logo.png" />
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Macaliag's Portfolio Website</title>
 
-    <!-- Bootstrap CSS -->
-    <link
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="logo.png" />
 
-    <!-- Boxicons CSS -->
-    <link
-      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <header class="text-center">
-      <nav class="navbar navbar-expand-lg navbar-dark">
-        <ul class="navbar-nav">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="feature.html">Features</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-    </header>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Boxicons CSS -->
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand">⸸⛧STARBOY⛧⸸</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="feature.html">Features</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
 
     <style>
-        .item {
-    overflow: hidden;
+    /* Global Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f4f8;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Section Title */
+#features {
+    padding: 80px 0;
+    background-color: #ffffff;
+}
+
+.section-title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #007bff;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.section-subtitle {
+    font-size: 1.25rem;
+    color: #777;
+    margin-bottom: 40px;
+}
+
+/* Image Grid */
+.row .col-sm-4 {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+/* Item Styling */
+.item {
     position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
     transition: transform 0.3s ease;
 }
 
-.item:hover img {
-    transform: scale(1.05); 
+/* Hover Effects */
+.item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
 }
 
-.item span {
-    color: white;
-    font-size: 1rem;
-    background: rgba(0, 0, 0, 0.5);
-    padding: 0.5rem;
-    border-radius: 50%;
+.item:hover img {
+    transform: scale(1.1);
 }
+
+/* Overlay for Text */
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;
+    border-radius: 8px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.item:hover .overlay {
+    opacity: 1;
+}
+
+.item-title {
+    font-size: 1.5rem;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* Responsiveness */
+@media (max-width: 991px) {
+    .section-title {
+        font-size: 2.5rem;
+    }
+
+    .item-title {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .item-title {
+        font-size: 1rem;
+    }
+
+    .row .col-sm-4 {
+        margin-bottom: 20px;
+    }
+}
+
     </style>
     
     <section id="features" class="feature mt-5">
-    <div class="conatiner text-center mt-5">
-       <div class="row align-items-center">
-             <div class="col-12">
-                 <h1 class="text-center pb-4">Features</h1>
-             </div>
-         
-         
-          <div class="row">
-             <div class="col-sm-4 mb- 5">
-                 <div class="item position-relative">
-                     <img src="act1.jpg" class="img-fluid" alt="Activity 1">
-                     <span class="position-absolute top-50 start-50 translate-middle"></span>
-                 </div>
-             </div>
-             
-             <div class="col-lg-4 mb-4">
-                 <div class="item position-relative">
-                     <img src="act2.png" class="img-fluid" alt="Activity 2">
-                     <span class="position-absolute top-50 start-50 translate-middle"></i></span>
-                 </div>
-             </div>
-         
-             <div class="col-lg-4 mb-4">
-                 <div class="item position-relative">
-                     <img src="c1.png" class="img-fluid" alt="Image 1">
-                     <span class="position-absolute top-50 start-50 translate-middle"></i></span>
-                 </div>
-             </div>
-         
-             <div class="col-lg-4 mb-4">
-                 <div class="item position-relative">
-                     <img src="c2.avif" class="img-fluid" alt="Image 2">
-                     <span class="position-absolute top-50 start-50 translate-middle"></i></span>
-                 </div>
-             </div>
-         
-             <div class="col-lg-4 mb-4">
-                 <div class="item position-relative">
-                     <img src="g1.jpeg" class="img-fluid" alt="Gallery 1">
-                     <span class="position-absolute top-50 start-50 translate-middle"></i></span>
-                 </div>
-             </div>
-         
-             <div class="col-lg-4 mb-4">
-                 <div class="item position-relative">
-                     <img src="g2.jpg" class="img-fluid" alt="Gallery 2">
-                     <span class="position-absolute top-40 start-50 translate-middle"></i></span>
-                 </div>
-             </div>
-         </div>
-    </div>
-</section>
+        <div class="container text-center mt-5">
+            <div class="row align-items-center">
+                <div class="col-12">
+                    <h1 class="section-title">Features</h1>
+                    <p class="section-subtitle">Discover the key features of our platform, designed to make your experience better.</p>
+                </div>
+            </div>
+    
+            <div class="row">
+                <!-- Feature 1 -->
+                <div class="col-sm-4 mb-5">
+                    <div class="item position-relative">
+                        <img src="act1.jpg" class="img-fluid" alt="Activity 1">
+                        <div class="overlay">
+                            <span class="item-title">Activity 1</span>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Feature 2 -->
+                <div class="col-sm-4 mb-5">
+                    <div class="item position-relative">
+                        <img src="act2.png" class="img-fluid" alt="Activity 2">
+                        <div class="overlay">
+                            <span class="item-title">Activity 2</span>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Feature 3 -->
+                <div class="col-sm-4 mb-5">
+                    <div class="item position-relative">
+                        <img src="c1.png" class="img-fluid" alt="Image 1">
+                        <div class="overlay">
+                            <span class="item-title">Image 1</span>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Feature 4 -->
+                <div class="col-sm-4 mb-5">
+                    <div class="item position-relative">
+                        <img src="c2.avif" class="img-fluid" alt="Image 2">
+                        <div class="overlay">
+                            <span class="item-title">Image 2</span>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Feature 5 -->
+                <div class="col-sm-4 mb-5">
+                    <div class="item position-relative">
+                        <img src="g1.jpeg" class="img-fluid" alt="Gallery 1">
+                        <div class="overlay">
+                            <span class="item-title">Gallery 1</span>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Feature 6 -->
+                <div class="col-sm-4 mb-5">
+                    <div class="item position-relative">
+                        <img src="g2.jpg" class="img-fluid" alt="Gallery 2">
+                        <div class="overlay">
+                            <span class="item-title">Gallery 2</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
