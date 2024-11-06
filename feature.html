@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Macaliag's Portfolio Website</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="images/x-icon" href="logo.png" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Boxicons CSS -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="text-center">
+      <nav class="navbar navbar-expand-lg navbar-dark">
+        <ul class="navbar-nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="feature.html">Features</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <style>
+        .item {
+    overflow: hidden;
+    position: relative;
+}
+
+.item img {
+    transition: transform 0.3s ease; 
+}
+
+.item:hover img {
+    transform: scale(1.05); 
+}
+
+.item span {
+    color: white;
+    font-size: 1rem;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 0.5rem;
+    border-radius: 50%;
+}
+    </style>
+    
+    <section id="features" class="feature mt-5">
+    <div class="conatiner text-center mt-5">
+       <div class="row align-items-center">
+             <div class="col-12">
+                 <h1 class="text-center pb-4">Features</h1>
+             </div>
+         
+         
+          <div class="row">
+             <div class="col-sm-4 mb- 5">
+                 <div class="item position-relative">
+                     <img src="act1.jpg" class="img-fluid" alt="Activity 1">
+                     <span class="position-absolute top-50 start-50 translate-middle"></span>
+                 </div>
+             </div>
+             
+             <div class="col-lg-4 mb-4">
+                 <div class="item position-relative">
+                     <img src="act2.png" class="img-fluid" alt="Activity 2">
+                     <span class="position-absolute top-50 start-50 translate-middle"></i></span>
+                 </div>
+             </div>
+         
+             <div class="col-lg-4 mb-4">
+                 <div class="item position-relative">
+                     <img src="c1.png" class="img-fluid" alt="Image 1">
+                     <span class="position-absolute top-50 start-50 translate-middle"></i></span>
+                 </div>
+             </div>
+         
+             <div class="col-lg-4 mb-4">
+                 <div class="item position-relative">
+                     <img src="c2.avif" class="img-fluid" alt="Image 2">
+                     <span class="position-absolute top-50 start-50 translate-middle"></i></span>
+                 </div>
+             </div>
+         
+             <div class="col-lg-4 mb-4">
+                 <div class="item position-relative">
+                     <img src="g1.jpeg" class="img-fluid" alt="Gallery 1">
+                     <span class="position-absolute top-50 start-50 translate-middle"></i></span>
+                 </div>
+             </div>
+         
+             <div class="col-lg-4 mb-4">
+                 <div class="item position-relative">
+                     <img src="g2.jpg" class="img-fluid" alt="Gallery 2">
+                     <span class="position-absolute top-40 start-50 translate-middle"></i></span>
+                 </div>
+             </div>
+         </div>
+    </div>
+</section>

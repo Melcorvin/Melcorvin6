@@ -1,0 +1,163 @@
+body {
+    background: url(background1.jpg) no-repeat center center/cover ;
+    background-color: #000000;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background: url(background1.jpg) no-repeat center center/cover ;
+    color: white;
+    padding: 0px 0;
+}
+
+.user .name {
+    font-weight: bolder;
+    font-size: 20px;
+    color: #ddd;
+    animation: neonize 4s ease-in-out infinite alternate;
+    text-align: center;
+}
+.user .post {
+    font-size: 16px;
+    color: #ddd;
+    animation: neonize 4s ease-in-out infinite alternate;
+    text-align: center;
+}
+.container .post {
+    text-align: center;
+    color: #ddd;
+    animation: neonize 4s ease-in-out infinite alternate;
+}
+
+.navbar {
+    margin-top: 5px;
+}
+
+.navbar a {
+    color: white;
+    font-size: 15px;
+    margin-right:4px;
+    font-weight: smaller;
+    display: block;
+    padding:0.60rem;
+    background:#222;
+    border-radius: 1rem;
+}
+
+.navbar a:hover {
+    background: white;
+    color: black;
+    box-shadow: 0 0 10px red;
+}
+
+.home-sci a {
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    margin: 10px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: #222;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    text-decoration: none;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.home-sci a:hover{
+    background: white;
+    color: black;
+    box-shadow: 0 0 10px red;
+}
+
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    padding: 20px; 
+}
+
+.counter .box {
+    color: #fff;
+    width:20rem;
+    background: url(background1.jpg) no-repeat center center/cover;
+    text-align: center;
+    padding:2rem 1rem;
+    margin:2rem;
+    flex-wrap: wrap;
+    display: flex;
+}
+
+.counter .box span {
+    font-size: 2.3rem;
+    color: white;
+    animation: neonize 10s ease-in-out infinite alternate;
+}
+
+.contact {
+    background: url(background1.jpg) no-repeat center center/cover ;
+    color: white;
+    padding: -1px 0;
+    text-align: center;
+}
+
+.contact form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.contact input, .contact textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.contact button {
+    background-color: #222;
+    color: rgb(255, 255, 255);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact button:hover {
+    background: white;
+    color: black;
+    box-shadow: 0 0 10px red;
+}
+
+.btn {
+    background-color: #007bff;
+    color: white;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+@keyframes neonize{
+    from {
+        text-shadow:
+        0 0 4px #fff,
+        0 0 10px #fff,
+        0 0 30px red,
+        0 0 50px red,
+        0 0 70px red,
+        0 0 90px red,    
+    }
+    to {
+        text-shadow:
+        0 0 2px #fff,
+        0 0 5px #fff,
+        0 0 15px red,
+        0 0 25px red,
+        0 0 35px red,
+        0 0 45px red;
+    }
+}
