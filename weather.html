@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Update</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-image: url(Weather\ 2.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        color: #000000;
+        padding: 10px;
+        text-align: center;
+      }
+      #weather {
+        margin-top: 20px;
+        padding: 20px;
+        background-color: transparent;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        display: inline-block;
+      }
+      h1 {
+        color: rgb(255, 255, 255);
+      }
+
+      #weatherForm {
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        width: 150px;
+        max-width: 100%;
+        text-align: center;
+        margin-top: 20px;
+        margin-left: 580px;
+      }
+
+      #weatherForm label {
+        display: block;
+        margin-bottom: 10px;
+        font-weight: bold;
+        color: #555;
+      }
+
+      #weatherForm input[type="text"] {
+        width: calc(100% - 22px);
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        font-size: 16px;
+        text-align: center;
+      }
+
+      #weatherForm button {
+        background-color: black;
+        border: none;
+        color: #ffffff;
+        padding: 10px 15px;
+        border-radius: 4px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      #weatherForm button:hover {
+        background-color: #214588;
+      }
+
+      #weatherResult {
+        margin-top: 20px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Weather Update</h1>
+    <div id="weather">
+      <p>Loading Weather Data...</p>
+    </div>
+
+    <form id="weatherForm">
+      <label for="cityInput">Enter City Name:</label>
+      <input type="text" id="cityInput" name="city" required />
+      <button type="button" onclick="fetchWeather()">Get Weather</button>
+    </form>
+
+    <script src="scripts.js"></script>
+  </body>
+</html>
