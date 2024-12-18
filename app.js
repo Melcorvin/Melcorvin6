@@ -1,33 +1,23 @@
-function showMessage(message, type) {
-  const outputMessage = document.getElementById("output-message");
-  outputMessage.textContent = message;
-  outputMessage.className =
-    "output-message " + (type === "success" ? "success" : "error");
-  outputMessage.style.display = "block";
-}
-
-(function () {
-  emailjs.init("1RLBBcYFI2u_YhPDw");
-  console.log("EmailJS initialized");
-})();
-
 document
-  .getElementById("contact-form")
+  .getElementById("userForm")
   .addEventListener("submit", function (event) {
     event.preventDefault();
-    console.log("Form submitted");
+    //console.log('Clicked')
+    //Get name data
+    let name = document.getElementById("name").value;
+    let age = document.getElementById("age").value;
+    let email = document.getElementById("email").value;
+    let hobby = document.getElementById("hobbies").value;
 
-    emailjs.sendForm("service_mw4if98", "template_tj9vkkd", this).then(
-      function () {
-        console.log("Email sent successfully");
-        showMessage("Thank you! Your message has been sent.", "success");
-      },
-      function (error) {
-        console.error("Error sending email:", error);
-        showMessage(
-          "Failed to send the message: " + JSON.stringify(error),
-          "error"
-        );
-      }
-    );
+    const user = {
+      name: name,
+      age: age,
+      email: email,
+      hobby: hobby,
+    };
+
+    const myJSON = JSON.stringify(user);
+    console.log(user);
+    console.log(myJSON);
+    document.getElementById("jsonOutput").innerHTML = myJSON;
   });
